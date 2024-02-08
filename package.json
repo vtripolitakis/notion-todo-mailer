@@ -1,0 +1,16 @@
+{
+  "name": "notion-todo-mailer",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A simple node.js app to parse and post a Notion ToDo list in Email",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Evangelos Tripolitakis (v.tripolitakis@trp.gr)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "nodemailer": "^6.9.9"
+  }
+}
