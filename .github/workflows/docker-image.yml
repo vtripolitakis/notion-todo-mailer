@@ -27,3 +27,11 @@ jobs:
         with:
           push: true
           tags: vtripolitakis/notion-todo-mailer:latest
+      - name: pull image on target machine
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: docker pull vtripolitakis/notion-todo-mailer:latest
