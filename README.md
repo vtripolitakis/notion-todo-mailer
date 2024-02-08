@@ -1,5 +1,8 @@
 # Notion ToDo Emailer
 
+## Evangelos Tripolitakis - v.tripolitakis@_NOSPAM_trp.gr
+### Latest change: 08/02/2024
+
 Notion ToDo Emailer is an application designed to sen my daily to-do lists from Notion to a specified email address.
 It aims to provide a convenient way to keep track of tasks directly from your inbox.
 
@@ -25,6 +28,20 @@ git clone https://github.com/vtripolitakis/notion-todo-mailer
 cd notion-todo-emailer
 npm install
 ```
+
+## Running with Docker
+
+### Build the image
+```shell
+docker build -t notion-todo-mailer .
+```
+
+### Run it
+Make sure you've populated properly the .env file
+```shell
+docker run --env-file ./.env notion-todo-mailer
+```
+
 
 ## Configuration
 You need to have a Notion Database on your workspace. This example works with ToDo lists. For other types feel free to change the code in the function `createMailData` in `utils/createMailBody.js`
