@@ -33,9 +33,10 @@ function createMailData(response) {
   // Extract results from the response data
   const data = response.data.results;
   let mailData = data.map((element) => {
+    const properties = element?.properties || {};
     return {
-      title: element?.properties?.Name?.title[0]?.plain_text || "N/A",
-      date: element?.properties["Date Created"]?.created_time || "N/A",
+      title: properties[""]?.title[0]?.plain_text || "N/A", // Access the empty key
+      date: properties["Date Created"]?.created_time || "N/A",
     };
   });
 
